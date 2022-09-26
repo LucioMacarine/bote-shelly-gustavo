@@ -40,7 +40,7 @@ namespace shelly_antoneo.commands
         {
             Tools tools = new Tools();
             await context.DeferAsync(true);
-            var amessage = new DiscordWebhookBuilder().WithContent(message).WithAvatarUrl("https://cdn.discordapp.com/avatars/563448056125587457/9e09f7e7f8b07ac859858a5352955224.png").WithUsername("guzavoo");
+            var amessage = new DiscordWebhookBuilder().WithContent(message).WithAvatarUrl("https://cdn.discordapp.com/avatars/563448056125587457/b58d1a14a2477139cd06d7d724db187e.png").WithUsername("guzavoo");
             var webhooks = await context.Channel.GetWebhooksAsync();
             if (webhooks.Where(x => x.User == client.CurrentUser).Count() > 0) 
             {
