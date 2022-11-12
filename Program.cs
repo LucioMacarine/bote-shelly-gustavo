@@ -12,7 +12,7 @@ namespace shelly_antoneo
 {
     class Program
     {
-        static string RunningPath { get { return System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location); } }
+        static string RunningPath { get { return System.AppContext.BaseDirectory; } }
 
         public static void Main(string[] args)
         {
@@ -48,6 +48,8 @@ namespace shelly_antoneo
             slashies.RegisterCommands<shelly_antoneo.commands.speak_group>();
             slashies.RegisterCommands<shelly_antoneo.commands.lolzinho>();
             slashies.RegisterCommands<shelly_antoneo.commands.juras>();
+            slashies.RegisterCommands<shelly_antoneo.commands.BigBangTheory>();
+            slashies.RegisterCommands<shelly_antoneo.commands.Ari>();
 
             await client.ConnectAsync();
 

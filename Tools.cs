@@ -18,7 +18,7 @@ namespace shelly_antoneo.tools
 {
     public class Tools
     {
-        static string RunningPath { get { return System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location); } }
+        static string RunningPath { get { return System.AppContext.BaseDirectory; } }
 
         public static DiscordEmbed BuildErrorEmbed(string EmbedDescription)
         {
